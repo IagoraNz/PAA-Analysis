@@ -13,5 +13,3 @@ def sorting_algorithm(array, function):
     fim = t.time()
 
     return fim - inicio
-
-
