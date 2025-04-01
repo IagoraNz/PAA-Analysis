@@ -23,25 +23,35 @@ print(lista1)
 print(lista2)
 print(lista3)
 
-def shell_sort(lista):
 
-    distancia = len(lista) // 2
-    while distancia > 0:
+def gaps_tokuda(tamanho):
+    gaps = []
+    k = 0
+    while True:
+        gap = (9 * (9 ** k) - 4 * (4 ** k)) // 5
+        if gap > tamanho:
+            break
+        gaps.append(gap)
+        k += 1
+    return list(reversed(gaps))
+
+
+def shell_sort(lista):
+    gaps = gaps_tokuda(len(lista))
+
+    for distancia in gaps:
         i = distancia
         while i < len(lista):
             temp = lista[i]
             trocou = False
             j = i - distancia
-            while j>= 0 and lista[j] > temp:
-                lista[j+distancia] = lista[j]
+            while j >= 0 and lista[j] > temp:
+                lista[j + distancia] = lista[j]
                 trocou = True
                 j -= distancia
-            
-            if trocou:
-                lista[j+distancia] = temp
+
+            lista[j + distancia] = temp
             i += 1
-        
-        distancia = distancia // 2
     
     return lista
 
