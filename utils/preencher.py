@@ -5,4 +5,4 @@ def gerar_numeros_aleatorios(arquivo, quantidade, limite_inferior=0, limite_supe
         for _ in range(quantidade):
             f.write(f"{random.randint(limite_inferior, limite_superior)}\n")
 
-gerar_numeros_aleatorios("PAA-Analysis/array.txt", 1000000, 0, 9999999)
+gerar_numeros_aleatorios("array.txt", 10000, 0, 10000)
