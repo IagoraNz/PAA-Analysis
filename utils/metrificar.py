@@ -58,8 +58,8 @@ def plotar_graficos(times_gnome, times_shell, ordem):
     plt.figure(figsize=(10, 6))  # Tamanho do gráfico
 
     # Plotando os tempos
-    plt.plot(tempos_gnome, label='GnomeSort', marker='o', linestyle='-', color='red')
-    plt.plot(tempos_shell, label='ShellSort', marker='s', linestyle='--', color='blue')
+    plt.plot(tempos_gnome, label='GnomeSort', marker='o', linestyle='-', color='black')
+    plt.plot(tempos_shell, label='ShellSort', marker='s', linestyle='--', color='green')
 
     # Adicionando detalhes ao gráfico
     plt.title(f'Comparação de Tempo de Execução: GnomeSort vs ShellSort ({ordem})', fontsize=14)
