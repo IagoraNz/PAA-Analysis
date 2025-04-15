@@ -17,11 +17,9 @@ def shell_sort(lista):
         i = distancia
         while i < len(lista):
             temp = lista[i]
-            trocou = False
             j = i - distancia
             while j >= 0 and lista[j] > temp:
                 lista[j + distancia] = lista[j]
-                trocou = True
                 j -= distancia
 
             lista[j + distancia] = temp
